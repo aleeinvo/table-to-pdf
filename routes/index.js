@@ -1,9 +1,24 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  const users = [
+    {
+      name: 'Ali',
+      email: 'alee@gmail.com',
+      city: 'Lahore'
+    },
+    {
+      name: 'Bilal',
+      email: 'bilal@gmail.com',
+      city: 'Bahawalpur'
+    },
+    {
+      name: 'Amns',
+      email: 'amna@gmail.com',
+      city: 'Sadar'
+    }
+  ];
+  res.render('index', { title: 'Express', users });
 });
 
 module.exports = router;
